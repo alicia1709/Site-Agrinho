@@ -1,1 +1,477 @@
+/* ==========================================================================
+   ESTILO FRUTIGER AERO (GREEN AND BLUE) - AGROECOTECH
+   ========================================================================== */
 
+/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #0d3558;
+    background: linear-gradient(135deg, #e0f4ff 0%, #bbf0ff 35%, #e1fbe5 75%, #b6f3c1 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Elementos de Brilho e Bolhas Cores Frutiger Aero */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(0, 162, 255, 0.2) 70%, rgba(57, 231, 95, 0.1) 100%);
+    box-shadow: 0 4px 15px rgba(0, 162, 255, 0.15), inset 0 -2px 10px rgba(255,255,255,0.6);
+    z-index: -1;
+    pointer-events: none;
+    animation: floatBubbles 12s infinite ease-in-out;
+}
+
+.b1 { width: 120px; height: 120px; top: 15%; left: 5%; animation-delay: 0s; }
+.b2 { width: 180px; height: 180px; top: 45%; right: -5%; animation-delay: 2s; }
+.b3 { width: 90px; height: 90px; top: 75%; left: 8%; animation-delay: 4s; }
+.b4 { width: 150px; height: 150px; bottom: 5%; right: 12%; animation-delay: 1s; }
+
+@keyframes floatBubbles {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* Cabeçalho Líquido / Vítreo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 130, 255, 0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0066cc;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.logo .highlight {
+    color: #2bb64c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0052a3;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 15px;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: #2bb64c;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #0066cc;
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    padding: 80px 8%;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content h1 {
+    font-size: 46px;
+    font-weight: 900;
+    color: #004b93;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 4px rgba(255,255,255,0.8);
+}
+
+.hero-content .slogan {
+    font-size: 19px;
+    color: #1e5844;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Botão Estilo Frutiger Aero Glossy */
+.btn-glossy {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #7fff24 0%, #2bd34f 45%, #19aa39 100%);
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.8), 
+                0 4px 15px rgba(43, 211, 79, 0.4), 
+                inset 0 -3px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease-in-out;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.btn-glossy:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.9), 
+                0 6px 22px rgba(43, 211, 79, 0.6), 
+                inset 0 -3px 6px rgba(0, 0, 0, 0.1);
+    filter: brightness(1.05);
+}
+
+.btn-glossy:active {
+    transform: translateY(1px);
+}
+
+.btn-small {
+    padding: 10px 22px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+/* Esfera Tecnológica Aurora/Eco */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eco-sphere {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #00d2ff 0%, #0084ff 40%, #004b93 100%);
+    box-shadow: 0 15px 40px rgba(0, 100, 255, 0.35), 
+                inset -15px -15px 40px rgba(0,0,0,0.3), 
+                inset 15px 15px 30px rgba(255,255,255,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    animation: rotateSphere 20s infinite linear;
+}
+
+@keyframes rotateSphere {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Seções Gerais */
+.section {
+    padding: 80px 8%;
+}
+
+.alt-bg {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #004b93;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #437c66;
+    margin-top: 5px;
+}
+
+/* Cards com Efeito Glassmorphism Puro */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 110, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 40px rgba(0, 110, 255, 0.15);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+.card-danger h3 {
+    color: #d35400;
+}
+
+.card p {
+    font-size: 15px;
+    color: #2c4d63;
+}
+
+/* Grid de Tecnologia Especial */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 24px;
+}
+
+.tech-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0,162,255,0.3));
+}
+
+.tech-item h4 {
+    font-size: 18px;
+    color: #0052a3;
+    margin-bottom: 10px;
+}
+
+/* Estrutura Interativa */
+.interactive-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.interactive-box h3 {
+    color: #004b93;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #1e523f;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 140, 255, 0.2);
+    background: rgba(255, 255, 255, 0.7);
+    font-family: 'Nunito', sans-serif;
+    color: #0d3558;
+    font-size: 15px;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #00d2ff;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
+/* Caixas de Resultados Dinâmicos */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e1f7ff 0%, #c4f2d0 100%);
+    border: 1px solid rgba(255,255,255,0.8);
+    font-size: 15px;
+    color: #0b442b;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.quiz-option {
+    display: block;
+    background: rgba(255,255,255,0.6);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.quiz-option:hover {
+    background: white;
+    border-color: #00d2ff;
+    transform: translateX(3px);
+}
+
+.quiz-option.selected {
+    background: #00d2ff;
+    color: white;
+    font-weight: 700;
+}
+
+/* Área de Contato e Newsletter */
+.contact-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-wrapper h2 {
+    color: #004b93;
+    margin-bottom: 15px;
+}
+
+.contact-wrapper p {
+    margin-bottom: 30px;
+    color: #2c5947;
+}
+
+.success-message {
+    margin-top: 20px;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Rodapé */
+footer {
+    background: rgba(0, 75, 147, 0.85);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 5px;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+footer p {
+    font-size: 15px;
+}
+
+.footer-sub {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+/* Responsividade Mobile Frutiger */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .hero-content {
+        order: 1;
+    }
+    .hero-visual {
+        order: 0;
+        margin-bottom: 40px;
+    }
+    .interactive-container {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 74px;
+        height: calc(100vh - 74px);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-top: 50px;
+        border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 20px 0;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
